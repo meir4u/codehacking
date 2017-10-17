@@ -30,7 +30,7 @@
       {!! Form::file('file', null,['class'=>'form-control']) !!}
     </div>
     <div class='form-group'>
-      {!! Form::label('is_active', 'Active' . ':') !!}
+      {!! Form::label('is_active', 'Status' . ':') !!}
       {!! Form::select('is_active', ['0' => 'No Active', '1' => 'Active'], 0, ['placeholder' => 'Select User Status...','class'=>'form-control']) !!}
     </div>
     <div class='form-group'>
