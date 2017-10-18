@@ -34,8 +34,8 @@ class AdminPostsController extends Controller
     {
         //
         $users = User::pluck('name','id')->all();
-        //$categories = Category::pluck('name','id')all();
-      return view('admin.posts.create',compact('users'/*,'categories'*/));
+        $categories = Category::pluck('name','id')->all();
+      return view('admin.posts.create',compact('users','categories'));
     }
 
     /**

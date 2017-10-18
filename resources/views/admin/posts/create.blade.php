@@ -20,14 +20,14 @@
         </div>
         <div class='form-group'>
           {!! Form::label('category_id', 'Category' . ':') !!}
-          {!! Form::select('category_id',[''=>'select category'] /*$categories*/, 1, ['placeholder' => 'Select Category...','class'=>'form-control']) !!}
+          {!! Form::select('category_id', $categories, 1, ['placeholder' => 'Select Category...','class'=>'form-control']) !!}
         </div>
         <div class='form-group'>
           {!! Form::label('user_id', 'User' . ':') !!}
           {!! Form::select('user_id', $users, null, ['placeholder' => 'Select User...','class'=>'form-control']) !!}
         </div>
         <div class='form-group'>
-          {!! Form::label('photo_id', 'Photo' . ':') !!}            
+          {!! Form::label('photo_id', 'Photo' . ':') !!}
           {!! Form::file('photo_id', null,['class'=>'form-control']) !!}
         </div>
 
