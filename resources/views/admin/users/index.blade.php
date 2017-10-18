@@ -2,6 +2,9 @@
 
 @section('content')
   <h1>Users</h1>
+
+@include('includes.delete')
+
   <h2>New table</h2>
   <p></p>
   <table class="table table-hover">
@@ -15,6 +18,7 @@
         <th>Status</th>
         <th>Created</th>
         <th>Updated</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -29,6 +33,14 @@
         <td>{{$user->is_active? 'Active' : 'NotActive'}}</td>
         <td>{{$user->created_at->diffForHumans()}}</td>
         <td>{{$user->updated_at->diffForHumans()}}</td>
+        <td>
+            {!! Form::open([
+                'method'=>'DELETE',
+                'action'=>['AdminUsersController@destroy',$user->id],
+                ]) !!}
+                {!! Form::submit('Delete User',['class'=>'btn btn-xs btn-danger col-sm-6']) !!}
+            {!! Form::close() !!}
+        </td>
       </tr>
     @endforeach
   @endif

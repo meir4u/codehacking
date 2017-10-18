@@ -63,6 +63,11 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li>
+                                      <a href="{{ route('admin') }}" >
+                                          Admin
+                                      </a>
+                                    </li>
                                 </ul>
                             </li>
                         @endif
